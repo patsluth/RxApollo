@@ -17,7 +17,7 @@ import RxSwiftExt
 
 
 
-public class ApolloWatcherObservable<Q>: NSObject, ObservableConvertibleType
+public class ApolloWatcher<Q>: NSObject, Cancellable, ObservableConvertibleType
 	where Q: GraphQLQuery
 {
 	public typealias Element = Q.ResultType
@@ -45,6 +45,16 @@ public class ApolloWatcherObservable<Q>: NSObject, ObservableConvertibleType
 											self.variable.accept($0)
 										}))
 		}
+	}
+	
+	public func refetch()
+	{
+		self.watcher.refetch()
+	}
+	
+	public func cancel()
+	{
+		self.watcher.cancel()
 	}
 	
 	public func asObservable() -> Observable<Element>
