@@ -1,0 +1,46 @@
+{
+  "name": "RxApollo",
+  "version": "1.0.0",
+  "summary": "RxSwift and PromiseKit wrappers for Apollo",
+  "description": "RxSwift and PromiseKit wrappers for Apollo",
+  "homepage": "https://github.com/patsluth/RxApollo",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "patsluth": "pat.sluth@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/patsluth/RxApollo.git",
+    "tag": "1.0.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "RxApollo/Classes/**/*",
+  "ios": {
+    "dependencies": {
+      "Apollo": [
+
+      ],
+      "RxSwift": [
+
+      ],
+      "RxCocoa": [
+
+      ],
+      "RxSwiftExt": [
+
+      ],
+      "PromiseKit": [
+
+      ],
+      "CancelForPromiseKit": [
+
+      ]
+    }
+  },
+  "swift_version": "5.0"
+}

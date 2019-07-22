@@ -1,0 +1,6 @@
+framework module RxApollo {
+  umbrella header "RxApollo-umbrella.h"
+
+  export *
+  module * { export * }
+}
