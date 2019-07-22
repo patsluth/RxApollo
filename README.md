@@ -17,7 +17,7 @@ RxApollo is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'RxApollo'
+pod 'RxApollo', :git => 'https://github.com/patsluth/RxApollo.git', :branch => 'master'
 ```
 
 ## Author
