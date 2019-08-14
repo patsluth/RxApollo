@@ -1,5 +1,5 @@
 //
-//  ApolloWatcherObservable.swift
+//  ApolloWatcher.swift
 //  RxApollo
 //
 //  Created by Pat Sluth on 2019-06-28.

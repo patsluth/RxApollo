@@ -1,7 +1,7 @@
 PODS:
-  - Apollo (0.11.1):
-    - Apollo/Core (= 0.11.1)
-  - Apollo/Core (0.11.1)
+  - Apollo (0.14.0):
+    - Apollo/Core (= 0.14.0)
+  - Apollo/Core (0.14.0)
   - CancelForPromiseKit (1.1.0):
     - CancelForPromiseKit/CorePromise (= 1.1.0)
     - CancelForPromiseKit/Foundation (= 1.1.0)
@@ -59,7 +59,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Apollo: 73985134be57195be9fdeed1d8d1d74037bacd98
+  Apollo: 56faf8bf9452bf2fd76d9d5fdbba5a63579f5f15
   CancelForPromiseKit: 753c8798c31519ab324dad33974b7f8e4a92257b
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   RxApollo: 0502da17d41f2e122dee05448ee9a94d697ba952
@@ -70,4 +70,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a146dc40e9d9464ce83f8767c495bcad06b0c5e1
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.7.5

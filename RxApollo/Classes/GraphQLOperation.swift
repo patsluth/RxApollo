@@ -21,13 +21,17 @@ public extension GraphQLOperation
 	
 	internal func makeResultHandler(_ block: @escaping (Self.ResultType) -> Void) -> GraphQLResultHandler<Self.Data>
 	{
-		return { result, error in
-			if let data = result?.data {
-				block(.success(data))
-			} else if let errors = GraphQLErrors(result?.errors) {
-				block(.failure(errors))
-			} else {
-				block(.failure(error ?? PMKError.cancelled))
+		return { result in
+			do {
+				let gqlResult = try result.get()
+				
+				if let data = gqlResult.data {
+					block(.success(data))
+				} else {
+					throw GraphQLErrors(gqlResult.errors) ?? PMKError.cancelled
+				}
+			} catch {
+				block(.failure(error))
 			}
 		}
 	}

@@ -88,7 +88,7 @@ public extension ApolloClient
 	
 	func watch<Q>(query: () -> Q,
 				  cachePolicy: CachePolicy = .returnCacheDataElseFetch,
-				  queue: DispatchQueue = DispatchQueue.main) -> ApolloWatcherObservable<Q>
+				  queue: DispatchQueue = DispatchQueue.main) -> ApolloWatcher<Q>
 		where Q: GraphQLQuery
 	{
 		return self.watch(query(), cachePolicy: cachePolicy, queue: queue)
@@ -96,13 +96,13 @@ public extension ApolloClient
 	
 	func watch<Q>(_ query: Q,
 				  cachePolicy: CachePolicy = .returnCacheDataElseFetch,
-				  queue: DispatchQueue = DispatchQueue.main) -> ApolloWatcherObservable<Q>
+				  queue: DispatchQueue = DispatchQueue.main) -> ApolloWatcher<Q>
 		where Q: GraphQLQuery
 	{
-		return ApolloWatcherObservable(apollo: self,
-									   query: query,
-									   cachePolicy: cachePolicy,
-									   queue: queue)
+		return ApolloWatcher(apollo: self,
+							 query: query,
+							 cachePolicy: cachePolicy,
+							 queue: queue)
 	}
 	
 	func subscribe<S>(subscription: () -> S,
